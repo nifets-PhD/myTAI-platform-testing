@@ -1,0 +1,100 @@
+CollapseReplicates      Combine Replicates in an ExpressionSet
+CombinatorialSignificance
+                        Compute the Statistical Significance of Each
+                        Replicate Combination
+DiffGenes               Differential Gene Expression Analysis
+DivergenceExpressionSetExample
+                        An Example DivergenceExpressionSet Data Set
+EarlyConservationTest   Perform Reductive Early Conservation Test
+EnrichmentTest          Phylostratum or Divergence Stratum Enrichment
+                        of a given Gene Set based on Fisher's Test
+Expressed               Filter for Expressed Genes
+FlatLineTest            Perform Flat Line Test
+GroupDiffs              Quantify the significant differences between
+                        gene expression distributions of age groups
+LateConservationTest    Perform Reductive Late Conservation Test
+MatchMap                Match a Phylostratigraphic Map or Divergence
+                        Map with a ExpressionMatrix
+PairwiseTest            Perform Pairwise Difference Test
+PhyloExpressionSetExample
+                        An Example PhyloExpressionSet Data Set
+PlotBarRE               Plot Mean Relative Expression Levels as Barplot
+PlotCIRatio             Plot Transcriptome Index using bootstrapping
+                        and confidence intervals
+PlotCategoryExpr        Plot the Expression Levels of each Age or
+                        Divergence Category as Boxplot, Violinplot, or
+                        Dotplot
+PlotContribution        Plot Cumulative Transcriptome Index
+PlotCorrelation         Plot the Correlation Between Phylostrata and
+                        Divergence Strata
+PlotDistribution        Plot the Frequency Distribution of Phylostrata
+                        or Divergence Strata
+PlotEnrichment          Plot the Phylostratum or Divergence Stratum
+                        Enrichment of a given Gene Set
+PlotGeneSet             Plot the Expression Profiles of a Gene Set
+PlotGroupDiffs          Plot the significant differences between gene
+                        expression distributions of PS or DS groups
+PlotMeans               Plot Mean Expression Profiles
+PlotMedians             Plot Median Expression Profiles
+PlotPattern             Plot the Transcriptome Age Index or
+                        Transcriptome Divergence Index
+PlotRE                  Plot Relative Expression Levels
+PlotReplicateQuality    Plot the Quality of Biological Replicates
+PlotSelectedAgeDistr    Plot the PS or DS distribution of a selected
+                        set of genes
+PlotSignature           Plot evolutionary signatures across
+                        transcriptomes
+PlotSignatureTransformed
+                        Plot evolutionary signatures across
+                        transcriptomes and RNA-seq transformations
+PlotVars                Plot Variance of Expression Profiles
+RE                      Transform to Relative Expression Levels
+REMatrix                Compute a Relative Expression Matrix
+ReductiveHourglassTest
+                        Perform the Reductive Hourglass Test
+ReverseHourglassTest    Perform the Reverse Hourglass Test
+SelectGeneSet           Select a Subset of Genes in an ExpressionSet
+TAI                     Compute the Transcriptome Age Index (TAI)
+TDI                     Compute the Transcriptome Divergence Index
+                        (TDI)
+TEI                     Compute the Transcriptome Evolutionary Index
+                        (TEI)
+TPI                     Compute the Transcriptome Polymorphism Index
+                        (TPI)
+age.apply               Age Category Specific apply Function
+bootMatrix              Compute a Permutation Matrix for Test
+                        Statistics
+bootTEI                 Compute a Permutation Matrix of Transcriptome
+                        Evolutionary Index (TEI)
+ecScore                 Compute the Hourglass Score for the
+                        EarlyConservationTest
+geom.mean               Geometric Mean
+harm.mean               Harmonic Mean
+lcScore                 Compute the Hourglass Score for the
+                        LateConservationTest
+omitMatrix              Compute TAI or TDI Profiles Omitting a Given
+                        Gene
+pMatrix                 Compute Partial TAI or TDI Values
+pMatrixTEI              Compute Partial Transcriptome Evolutionary
+                        Index (TEI) Values
+pStrata                 Compute Partial Strata Values
+pStrataTEI              Compute Partial Transcriptome Evolutionary
+                        Index (TEI) Strata Values
+pTAI                    Compute the Phylostratum Contribution to the
+                        Global Transcriptome Age Index
+pTDI                    Compute the Divergence Stratum Contribution to
+                        the Global Transcriptome Divergence Index
+pairScore               Compute the Pairwise Difference in TAI Score
+rcpp_boottei_parallel   rcpp_boottei_parallel
+rcpp_pMatrix_parallel   rcpp_pMatrix_parallel
+rcpp_pStrata_parallel   rcpp_pStrata_parallel
+rcpp_tei_parallel       rcpp_tei_parallel
+reversehourglassScore   Compute the Reverse Hourglass Score for the
+                        Reverse Hourglass Test
+rhScore                 Compute the Hourglass Score for the Reductive
+                        Hourglass Test
+taxid                   Retrieve taxonomy categories from NCBI Taxonomy
+tf                      Transform Gene Expression Levels
+tfPS                    Transform Phylostratum Values
+tfStability             Perform Permutation Tests Under Different
+                        Transformations

@@ -1,0 +1,105 @@
+* using log directory '/output/myTAI.Rcheck'
+* using R version 4.4.2 (2024-10-31)
+* using platform: aarch64-unknown-linux-gnu
+* R was compiled by
+    gcc (Debian 14.2.0-7) 14.2.0
+    GNU Fortran (Debian 14.2.0-7) 14.2.0
+* running under: Debian GNU/Linux trixie/sid
+* using session charset: ASCII
+* using options '--no-manual --as-cran'
+* checking for file 'myTAI/DESCRIPTION' ... OK
+* checking extension type ... Package
+* this is package 'myTAI' version '2.0.0'
+* package encoding: UTF-8
+* checking CRAN incoming feasibility ... [5s/88s] NOTE
+Maintainer: 'Hajk-Georg Drost <hajk-georg.drost@tuebingen.mpg.de>'
+
+New submission
+
+Package was archived on CRAN
+
+CRAN repository db overrides:
+  X-CRAN-Comment: Archived on 2024-10-01 as issues were not corrected
+    in time.
+
+The Date field is over a month old.
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking serialization versions ... OK
+* checking whether package 'myTAI' can be installed ... [13s/15s] OK
+* used C++ compiler: 'g++ (Debian 14.2.0-8) 14.2.0'
+* checking installed package size ... NOTE
+  installed size is 13.5Mb
+  sub-directories of 1Mb or more:
+    data   2.0Mb
+    doc    1.1Mb
+    help   1.7Mb
+    libs   8.3Mb
+* checking package directory ... OK
+* checking for future file timestamps ... OK
+* checking 'build' directory ... OK
+* checking DESCRIPTION meta-information ... OK
+* checking top-level files ... OK
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking code files for non-ASCII characters ... OK
+* checking R files for syntax errors ... WARNING
+Warning in Sys.setlocale("LC_CTYPE", "en_US.UTF-8") :
+  OS reports request to set locale to "en_US.UTF-8" cannot be honored
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking use of S3 registration ... OK
+* checking dependencies in R code ... OK
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... OK
+* checking Rd files ... OK
+* checking Rd metadata ... OK
+* checking Rd line widths ... OK
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... OK
+* checking for code/documentation mismatches ... OK
+* checking Rd \usage sections ... OK
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking contents of 'data' directory ... OK
+* checking data for non-ASCII characters ... OK
+* checking data for ASCII and uncompressed saves ... OK
+* checking line endings in shell scripts ... OK
+* checking line endings in C/C++/Fortran sources/headers ... OK
+* checking line endings in Makefiles ... OK
+* checking compilation flags in Makevars ... OK
+* checking for GNU extensions in Makefiles ... OK
+* checking for portable use of $(BLAS_LIBS) and $(LAPACK_LIBS) ... OK
+* checking use of PKG_*FLAGS in Makefiles ... OK
+* checking use of SHLIB_OPENMP_*FLAGS in Makefiles ... OK
+* checking pragmas in C/C++ headers and code ... OK
+* checking compilation flags used ... NOTE
+Compilation used the following non-portable flag(s):
+  '-mbranch-protection=standard'
+* checking compiled code ... OK
+* checking installed files from 'inst/doc' ... OK
+* checking files in 'vignettes' ... OK
+* checking examples ... [23s/25s] OK
+* checking for unstated dependencies in 'tests' ... OK
+* checking tests ... [19s/19s] OK
+  Running 'testthat.R' [19s/19s]
+* checking for unstated dependencies in vignettes ... OK
+* checking package vignettes ... OK
+* checking re-building of vignette outputs ... OK
+* checking for non-standard things in the check directory ... OK
+* checking for detritus in the temp directory ... OK
+* DONE
+Status: 1 WARNING, 3 NOTEs

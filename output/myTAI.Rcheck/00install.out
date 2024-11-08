@@ -1,0 +1,33 @@
+* installing *source* package 'myTAI' ...
+** using staged installation
+gcc 14.2.0
+zlib 1.3.1 is available ok
+***
+*** OpenMP not supported!
+***   parallelize operations like sorting, grouping, file reading, etc.
+*** Continuing installation without OpenMP support...
+***
+** libs
+using C++ compiler: 'g++ (Debian 14.2.0-8) 14.2.0'
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG -I/opt/homebrew/opt/libomp/include -I'/usr/local/lib/R/site-library/RcppArmadillo/include' -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/usr/local/lib/R/site-library/cpp11/include' -I'/usr/local/lib/R/site-library/RcppThread/include' -I'/usr/local/lib/R/site-library/RcppEigen/include'     -fPIC  -g -O2 -ffile-prefix-map=/build/reproducible-path/r-base-4.4.2=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -mbranch-protection=standard -Wdate-time -D_FORTIFY_SOURCE=2   -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG -I/opt/homebrew/opt/libomp/include -I'/usr/local/lib/R/site-library/RcppArmadillo/include' -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/usr/local/lib/R/site-library/cpp11/include' -I'/usr/local/lib/R/site-library/RcppThread/include' -I'/usr/local/lib/R/site-library/RcppEigen/include'     -fPIC  -g -O2 -ffile-prefix-map=/build/reproducible-path/r-base-4.4.2=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -mbranch-protection=standard -Wdate-time -D_FORTIFY_SOURCE=2   -c code.cpp -o code.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG -I/opt/homebrew/opt/libomp/include -I'/usr/local/lib/R/site-library/RcppArmadillo/include' -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/usr/local/lib/R/site-library/cpp11/include' -I'/usr/local/lib/R/site-library/RcppThread/include' -I'/usr/local/lib/R/site-library/RcppEigen/include'     -fPIC  -g -O2 -ffile-prefix-map=/build/reproducible-path/r-base-4.4.2=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -mbranch-protection=standard -Wdate-time -D_FORTIFY_SOURCE=2   -c cpp11.cpp -o cpp11.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG -I/opt/homebrew/opt/libomp/include -I'/usr/local/lib/R/site-library/RcppArmadillo/include' -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/usr/local/lib/R/site-library/cpp11/include' -I'/usr/local/lib/R/site-library/RcppThread/include' -I'/usr/local/lib/R/site-library/RcppEigen/include'     -fPIC  -g -O2 -ffile-prefix-map=/build/reproducible-path/r-base-4.4.2=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -mbranch-protection=standard -Wdate-time -D_FORTIFY_SOURCE=2   -c rcpp_funcs.cpp -o rcpp_funcs.o
+g++ -std=gnu++17 -shared -L/usr/lib/R/lib -Wl,-z,relro -o myTAI.so RcppExports.o code.o cpp11.o rcpp_funcs.o -lz -L/usr/lib/R/lib -lR
+if [ "myTAI.so" != "myTAI.so" ]; then mv myTAI.so myTAI.so; fi
+if [ "" != "Windows_NT" ] && [ `uname -s` = 'Darwin' ]; then install_name_tool -id myTAI.so myTAI.so; fi
+installing to /output/myTAI.Rcheck/00LOCK-myTAI/00new/myTAI/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (myTAI)
