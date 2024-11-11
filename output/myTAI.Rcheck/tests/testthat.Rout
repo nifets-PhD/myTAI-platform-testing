@@ -237,7 +237,7 @@ Total runtime of your permutation test: 0.004  seconds.
 [ Computing variances of permuted transcriptome signatures ... ]
 
 
-Total runtime of your permutation test: 0.004  seconds.
+Total runtime of your permutation test: 0.005  seconds.
 [ Number of Eigen threads that are employed on your machine: 1 ]
 
 [ Computing age assignment permutations for test statistic ... ]
@@ -253,7 +253,7 @@ Total runtime of your permutation test: 0.004  seconds.
 [ Computing variances of permuted transcriptome signatures ... ]
 
 
-Total runtime of your permutation test: 0.004  seconds.
+Total runtime of your permutation test: 0.005  seconds.
 
 [ Number of Eigen threads that are employed on your machine: 1 ]
 
@@ -407,4 +407,4 @@ Total runtime of your permutation test: 0.004  seconds.
 > 
 > proc.time()
    user  system elapsed 
- 18.643   0.138  18.928 
+ 18.752   0.136  19.020 

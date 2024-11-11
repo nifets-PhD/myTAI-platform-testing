@@ -1,7 +1,7 @@
 PKG_CPPFLAGS =  -I/opt/homebrew/opt/libomp/include
 PKG_CXXFLAGS =  
-#PKG_CFLAGS =   
-PKG_LIBS =   -lz 
+#PKG_CFLAGS =  $(SHLIB_OPENMP_CFLAGS) 
+PKG_LIBS =  $(SHLIB_OPENMP_CFLAGS) -lz 
 all: $(SHLIB)
 #	@echo PKG_CFLAGS = $(SHLIB_OPENMP_CFLAGS) 
 #	@echo PKG_LIBS = $(PKG_LIBS)

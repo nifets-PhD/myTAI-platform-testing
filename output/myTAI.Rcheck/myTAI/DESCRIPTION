@@ -42,11 +42,11 @@ BugReports: https://github.com/drostlab/myTAI/issues
 RoxygenNote: 7.3.2
 Encoding: UTF-8
 SystemRequirements: C++
-Packaged: 2024-11-08 15:14:24 UTC; root
+Packaged: 2024-11-11 10:58:16 UTC; root
 Author: Hajk-Georg Drost [aut, cre] (<https://orcid.org/0000-0002-1567-306X>),
   Jaruwatana Sodai Lotharukpong [aut, ctb]
     (<https://orcid.org/0000-0002-3475-0980>),
   Nikola Kalábová [aut, ctb] (<https://orcid.org/0009-0007-6384-8809>),
   Kristian K Ullrich [aut, ctb] (<https://orcid.org/0000-0003-4308-9626>)
 Maintainer: Hajk-Georg Drost <hajk-georg.drost@tuebingen.mpg.de>
-Built: R 4.4.2; aarch64-unknown-linux-gnu; 2024-11-08 16:30:27 UTC; unix
+Built: R 4.4.2; aarch64-unknown-linux-gnu; 2024-11-11 11:00:26 UTC; unix

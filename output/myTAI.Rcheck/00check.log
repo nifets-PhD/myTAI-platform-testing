@@ -11,7 +11,7 @@
 * checking extension type ... Package
 * this is package 'myTAI' version '2.0.0'
 * package encoding: UTF-8
-* checking CRAN incoming feasibility ... [5s/88s] NOTE
+* checking CRAN incoming feasibility ... [5s/99s] NOTE
 Maintainer: 'Hajk-Georg Drost <hajk-georg.drost@tuebingen.mpg.de>'
 
 New submission
@@ -27,12 +27,12 @@ The Date field is over a month old.
 * checking package dependencies ... OK
 * checking if this is a source package ... OK
 * checking if there is a namespace ... OK
-* checking for executable files ... OK
+* checking for .dll and .exe files ... OK
 * checking for hidden files and directories ... OK
 * checking for portable file names ... OK
 * checking for sufficient/correct file permissions ... OK
 * checking serialization versions ... OK
-* checking whether package 'myTAI' can be installed ... [13s/15s] OK
+* checking whether package 'myTAI' can be installed ... [14s/16s] OK
 * used C++ compiler: 'g++ (Debian 14.2.0-8) 14.2.0'
 * checking installed package size ... NOTE
   installed size is 13.5Mb
@@ -42,10 +42,14 @@ The Date field is over a month old.
     help   1.7Mb
     libs   8.3Mb
 * checking package directory ... OK
-* checking for future file timestamps ... OK
+* checking for future file timestamps ... NOTE
+unable to verify current time
 * checking 'build' directory ... OK
 * checking DESCRIPTION meta-information ... OK
-* checking top-level files ... OK
+* checking top-level files ... WARNING
+A complete check needs the 'checkbashisms' script.
+See section 'Configure and cleanup' in the 'Writing R Extensions'
+manual.
 * checking for left-over files ... OK
 * checking index information ... OK
 * checking package subdirectories ... OK
@@ -84,15 +88,22 @@ Warning in Sys.setlocale("LC_CTYPE", "en_US.UTF-8") :
 * checking for GNU extensions in Makefiles ... OK
 * checking for portable use of $(BLAS_LIBS) and $(LAPACK_LIBS) ... OK
 * checking use of PKG_*FLAGS in Makefiles ... OK
-* checking use of SHLIB_OPENMP_*FLAGS in Makefiles ... OK
+* checking use of SHLIB_OPENMP_*FLAGS in Makefiles ... NOTE
+  src/Makevars: SHLIB_OPENMP_CFLAGS is included in PKG_LIBS but linking is by C++
+Use of these macros is discussed in sect 1.2.1.1 of 'Writing R
+Extensions'. The macros for different languages may differ so the
+matching macro must be used in PKG_CXXFLAGS (etc) and match that used
+in PKG_LIBS (except for Fortran: see the manual).
 * checking pragmas in C/C++ headers and code ... OK
 * checking compilation flags used ... NOTE
 Compilation used the following non-portable flag(s):
   '-mbranch-protection=standard'
 * checking compiled code ... OK
+ WARNING
+'qpdf' is needed for checks on size reduction of PDFs
 * checking installed files from 'inst/doc' ... OK
 * checking files in 'vignettes' ... OK
-* checking examples ... [23s/25s] OK
+* checking examples ... [22s/25s] OK
 * checking for unstated dependencies in 'tests' ... OK
 * checking tests ... [19s/19s] OK
   Running 'testthat.R' [19s/19s]
@@ -102,4 +113,4 @@ Compilation used the following non-portable flag(s):
 * checking for non-standard things in the check directory ... OK
 * checking for detritus in the temp directory ... OK
 * DONE
-Status: 1 WARNING, 3 NOTEs
+Status: 3 WARNINGs, 5 NOTEs

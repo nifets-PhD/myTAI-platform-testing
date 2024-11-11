@@ -5,40 +5,58 @@ FROM debian:unstable
 RUN apt -y update
 RUN apt -y upgrade
 
-# Dependencies for R packages
-# https://github.com/r-lib/devtools/issues/2131
-RUN apt install -y build-essential libcurl4-gnutls-dev libxml2-dev libssl-dev software-properties-common libnlopt-dev \
-                   dialog apt-utils \
-                   libharfbuzz-dev libfribidi-dev libfontconfig1-dev libgit2-dev \
-                   libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev \
-                   pandoc \
-                   texlive qpdf devscripts
-
-# ^ Many of these libraries are necessary for certain myTAI dependencies or for the CRAN check
-
-
-
 # Install git
 RUN apt -y install git
 
 # Install R
 RUN apt install -y r-base r-base-dev
+RUN R -e "install.packages('remotes',dependencies=TRUE, repos='https://www.stats.bris.ac.uk/R/')"
+
+# Dependency for package 'curl' needed for BiocManager
+RUN apt -y install libcurl4-openssl-dev
 
 # Download myTAI
 RUN git clone "https://github.com/drostlab/myTAI/" myTAI
 
 # Install myTAI deps
-RUN R -e "install.packages('remotes',dependencies=TRUE, repos='https://www.stats.bris.ac.uk/R/')"
-RUN R -e "install.packages('knitr',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+
 
 # Need to install DeSeq2 separately with bioconductor
 RUN R -e "install.packages('BiocManager',dependencies=TRUE, repos='https://www.stats.bris.ac.uk/R/')"
 RUN R -e "BiocManager::install('DESeq2')"
 
+# devtools deps required libraries
+RUN apt -y install libfontconfig1-dev
+
+# needed for libxml
+RUN apt -y install libxml2-dev
+
+# needed for gert
+RUN apt -y install libgit2-dev
+
+# needed for  textshaping
+RUN apt -y install libharfbuzz-dev libfribidi-dev
+
+# needed for ragg
+RUN apt -y install libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev
+RUN R -e "install.packages('ragg',dependencies=TRUE, repos='https://www.stats.bris.ac.uk/R/')"
+RUN R -e "install.packages('devtools',dependencies=TRUE, repos='https://www.stats.bris.ac.uk/R/')"
+
+# needed for nloptr
+RUN apt -y install cmake
+
+RUN R -e "install.packages('ggpubr',dependencies=TRUE, repos='https://www.stats.bris.ac.uk/R/')"
+
 RUN R -e "remotes::install_deps('myTAI', dependencies=TRUE, repos='https://www.stats.bris.ac.uk/R/')"
 
-# Build myTAI and check the build
-RUN R CMD build myTAI
+# needed for vignette building
+RUN apt -y install pandoc
+
+# # Build myTAI and check the build
+RUN git clone -b debian-testing "https://github.com/drostlab/myTAI" mymyTAI
+
+
+RUN R CMD build mymyTAI
 
 RUN mkdir -p /output
 

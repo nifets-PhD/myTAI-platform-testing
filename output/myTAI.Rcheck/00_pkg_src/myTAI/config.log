@@ -1,3 +1,6 @@
 1.8.1
 0
 4
+using C compiler: 'gcc (Debian 14.2.0-8) 14.2.0'
+gcc -I"/usr/share/R/include" -DNDEBUG       -fPIC  -g -O2 -ffile-prefix-map=/build/reproducible-path/r-base-4.4.2=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -mbranch-protection=standard -Wdate-time -D_FORTIFY_SOURCE=2  -c test-omp.c -o test-omp.o
+gcc -shared -L/usr/lib/R/lib -Wl,-z,relro -o test-omp.so test-omp.o -L/usr/lib/R/lib -lR
